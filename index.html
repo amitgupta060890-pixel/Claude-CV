@@ -51,6 +51,9 @@
             padding: 40px 50px;
             position: relative;
             overflow: hidden;
+            display: flex;
+            align-items: center;
+            gap: 40px;
         }
 
         .header::before {
@@ -64,9 +67,31 @@
             border-radius: 50%;
         }
 
+        .profile-image-container {
+            position: relative;
+            z-index: 2;
+            flex-shrink: 0;
+        }
+
+        .profile-image {
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+            border: 5px solid rgba(255, 255, 255, 0.3);
+            object-fit: cover;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s ease;
+        }
+
+        .profile-image:hover {
+            transform: scale(1.05);
+            border-color: #fbbf24;
+        }
+
         .header-content {
             position: relative;
             z-index: 2;
+            flex: 1;
         }
 
         .name {
@@ -490,11 +515,20 @@
             .contact-bar {
                 padding: 15px 20px;
             }
+            .header {
+                flex-direction: column;
+                text-align: center;
+                gap: 20px;
+            }
             .header, .main-section, .sidebar {
                 padding: 25px 20px;
             }
             .name {
                 font-size: 2em;
+            }
+            .profile-image {
+                width: 150px;
+                height: 150px;
             }
         }
     </style>
@@ -505,6 +539,9 @@
     <div class="resume-container">
         <!-- Header -->
         <div class="header">
+            <div class="profile-image-container">
+                <img src="profile.jpg" alt="Amit Gupta" class="profile-image">
+            </div>
             <div class="header-content">
                 <h1 class="name">AMIT GUPTA</h1>
                 <h2 class="title">Team Leader | Process Automation, Operations & Logistics Excellence</h2>
@@ -717,7 +754,7 @@
             <div class="main-section">
                 <div class="section-title">PROFESSIONAL SUMMARY</div>
                 <p class="summary-text">
-                    Results-driven Team Leader with <strong>13+ years</strong> of expertise in operations optimization, process automation, and logistics management. Proven track record in managing <strong>500+ daily shipments</strong> across 15+ carriers while leading teams of 6+ members. Expert in identifying operational inefficiencies, implementing automation solutions, and driving significant cost savings through fraud detection and process improvements. Unique combination of commerce background and technical expertise enables rapid implementation of innovative solutions that deliver measurable business impact.
+                    Results-driven Team Leader with <strong>13+ years</strong> of expertise in operations optimization, process automation, and logistics management. Proven track record in managi[...]
                 </p>
 
                 <div class="unique-points">
@@ -745,10 +782,10 @@
 
                     <h4 style="color: #667eea; margin-bottom: 12px; font-size: 1.1em;">Key Achievements</h4>
                     <ul class="achievements-list">
-                        <li><strong>Cost Savings & Fraud Prevention:</strong> Identified critical Shopify app discrepancy causing canceled orders to ship, preventing significant product and revenue losses</li>
-                        <li><strong>Business Development:</strong> Exposed warehouse theft scam through detailed reconciliation analysis, established new reconciliation team and secured new business contract</li>
-                        <li><strong>Process Optimization:</strong> Redesigned report generation workflow, reducing resource requirement from 13-14 people (3hrs) to 5 people (2hrs daily) - achieving 50%+ efficiency improvement</li>
-                        <li><strong>Crisis Management:</strong> Managed pandemic-related store closure redirections, optimizing handling time from 5 minutes to 2 minutes per task (60% improvement)</li>
+                        <li><strong>Cost Savings & Fraud Prevention:</strong> Identified critical Shopify app discrepancy causing canceled orders to ship, preventing significant product and reven[...]
+                        <li><strong>Business Development:</strong> Exposed warehouse theft scam through detailed reconciliation analysis, established new reconciliation team and secured new busin[...]
+                        <li><strong>Process Optimization:</strong> Redesigned report generation workflow, reducing resource requirement from 13-14 people (3hrs) to 5 people (2hrs daily) - achievi[...]
+                        <li><strong>Crisis Management:</strong> Managed pandemic-related store closure redirections, optimizing handling time from 5 minutes to 2 minutes per task (60% improvement[...]
                         <li><strong>Automation Excellence:</strong> Built automated shipment tracking system managing 500+ daily shipments across 15+ carriers with real-time status updates</li>
                         <li><strong>Quality Improvement:</strong> Developed Excel macros and Google Sheets automation reducing invoice quality check time by 60%</li>
                         <li><strong>Team Leadership:</strong> Successfully led team of 6 members, conducting weekly brainstorming sessions and managing multiple projects simultaneously</li>
@@ -818,7 +855,7 @@
 
                 <div class="project-card">
                     <div class="project-title">Automated Shipment Tracking System</div>
-                    <div class="project-description">Built comprehensive bulk-tracking platform with frontend interface and server-side scrapers using Playwright. System provides real-time tracking status for 500+ daily shipments across 15+ carriers including DHL, FedEx, UPS, CHR, DSV, Expeditors, BlueGrace, and Purolator.</div>
+                    <div class="project-description">Built comprehensive bulk-tracking platform with frontend interface and server-side scrapers using Playwright. System provides real-time tracki[...]
                     <div class="impact-metric">Real-time visibility | 500+ shipments/day | 15+ carriers</div>
                     <div class="project-tags">
                         <span class="tag">Web Development</span>
@@ -830,9 +867,16 @@
 
                 <div class="project-card">
                     <div class="project-title">Invoice Quality Check Automation</div>
-                    <div class="project-description">Developed advanced Excel VBA macros and Google Sheets automation scripts to streamline invoice verification process. Implemented automated data validation, error detection, and compliance checking.</div>
+                    <div class="project-description">Developed advanced Excel VBA macros and Google Sheets automation scripts to streamline invoice verification process. Implemented automated dat[...]
                     <div class="impact-metric">60% time reduction | Improved accuracy | Scalable solution</div>
                     <div class="project-tags">
                         <span class="tag">Excel VBA</span>
                         <span class="tag">Google Apps Script</span>
                         <span class="tag">Process Automation</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
